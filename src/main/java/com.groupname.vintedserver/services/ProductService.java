@@ -1,7 +1,7 @@
 package com.groupname.vintedserver.services;
 
 import com.groupname.vintedserver.models.Product;
-import com.groupname.vintedserver.exceptions.ProductNotFoundException;
+import com.groupname.vintedserver.exceptions.ProductNotFindException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,12 +18,12 @@ public class ProductService {
      * Finds a product by its ID.
      * @param productId The ID of the product to find.
      * @return The Product object if found.
-     * @throws ProductNotFoundException If the product is not found.
+     * @throws ProductNotFindException If the product is not found.
      */
-    public Product findProductById(String productId) throws ProductNotFoundException {
+    public Product findProductById(String productId) throws ProductNotFindException {
         Product product = productRepository.get(productId);
         if (product == null) {
-            throw new ProductNotFoundException("Product not found for ID: " + productId);
+            throw new ProductNotFindException("Product not found for ID: " + productId);
         }
         return product;
     }
