@@ -32,6 +32,4 @@ public class ProductController {
     public void addProduct(Product product) {
         productService.addProduct(product);
     }
-
-    // Other product-related methods can be added here
 }

@@ -33,6 +33,4 @@ public class UserController {
     public void addUser(User user) {
         userService.addUser(user);
     }
-
-    // Other user-related methods can be added here
 }

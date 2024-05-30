@@ -35,6 +35,4 @@ public class UserService {
     public void addUser(User user) {
         userRepository.put(user.getId(), user);
     }
-
-    // Other service methods can be added here
 }

@@ -35,7 +35,4 @@ public class ProductService {
     public void addProduct(Product product) {
         productRepository.put(product.getId(), product);
     }
-
-    // Other service methods can be added here
 }
-
