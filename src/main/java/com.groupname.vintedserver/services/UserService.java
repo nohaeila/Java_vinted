@@ -1,7 +1,7 @@
 package com.groupname.vintedserver.services;
 
 import com.groupname.vintedserver.models.User;
-import com.groupname.vintedserver.exceptions.UserNotFoundException;
+import com.groupname.vintedserver.exceptions.UserNotFindException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,12 +18,12 @@ public class UserService {
      * Finds a user by their ID.
      * @param userId The ID of the user to find.
      * @return The User object if found.
-     * @throws UserNotFoundException If the user is not found.
+     * @throws UserNotFindException If the user is not found.
      */
-    public User findUserById(String userId) throws UserNotFoundException {
+    public User findUserById(String userId) throws UserNotFindException {
         User user = userRepository.get(userId);
         if (user == null) {
-            throw new UserNotFoundException("User not found for ID: " + userId);
+            throw new UserNotFindException("User not found for ID: " + userId);
         }
         return user;
     }

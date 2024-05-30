@@ -3,7 +3,7 @@ package com.groupname.vintedserver.controllers;
 
 import com.groupname.vintedserver.models.User;
 import com.groupname.vintedserver.services.UserService;
-import com.groupname.vintedserver.exceptions.UserNotFoundException;
+import com.groupname.vintedserver.exceptions.UserNotFindException;
 
 /**
  * Controller class responsible for handling user-related requests.
@@ -20,7 +20,7 @@ public class UserController {
     public User getUserById(String userId) {
         try {
             return userService.findUserById(userId);
-        } catch (UserNotFoundException e) {
+        } catch (UserNotFindException e) {
             System.err.println(e.getMessage());
             return null;
         }

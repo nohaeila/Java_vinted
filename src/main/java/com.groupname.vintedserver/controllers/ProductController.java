@@ -2,7 +2,7 @@ package com.groupname.vintedserver.controllers;
 
 import com.groupname.vintedserver.models.Product;
 import com.groupname.vintedserver.services.ProductService;
-import com.groupname.vintedserver.exceptions.ProductNotFoundException;
+import com.groupname.vintedserver.exceptions.ProductNotFindException;
 
 /**
  * Controller class responsible for handling product-related requests.
@@ -19,7 +19,7 @@ public class ProductController {
     public Product getProductById(String productId) {
         try {
             return productService.findProductById(productId);
-        } catch (ProductNotFoundException e) {
+        } catch (ProductNotFindException e) {
             System.err.println(e.getMessage());
             return null;
         }
