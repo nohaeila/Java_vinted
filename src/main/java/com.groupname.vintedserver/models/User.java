@@ -1,4 +1,4 @@
-package com.myteam.vintedserver.models;
+package com.groupname.vintedserver.models;
 
 public class User {
     private String id;

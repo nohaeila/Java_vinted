@@ -1,7 +1,7 @@
-package com.goupname.vintedserver.controllers;
+package com.groupname.vintedserver.controllers;
 
-import com.myteam.vintedserver.services.ProductService;
-import com.myteam.vintedserver.models.Product;
+import com.groupname.vintedserver.services.ProductService;
+import com.groupname.vintedserver.models.Product;
 
 public class ProductController {
     private ProductService productService = new ProductService();
