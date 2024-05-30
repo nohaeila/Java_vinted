@@ -1,7 +1,9 @@
 package com.groupname.vintedserver.exceptions;
-
-public class ProductNotFindException extends Exception {
-    public ProductNotFindException(String message) {
+/**
+ * Custom exception to be thrown when a user is not found.
+ */
+public class UserNotFindException extends Exception {
+    public UserNotFindException(String message) {
         super(message);
     }
 }

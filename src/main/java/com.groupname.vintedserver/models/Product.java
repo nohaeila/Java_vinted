@@ -1,12 +1,16 @@
 package com.groupname.vintedserver.models;
 
+/**
+ * This class represents a product in the system.
+ * It contains basic product information such as ID, name, price, and the seller.
+ */
 public class Product {
     private String id;
     private String name;
     private double price;
     private User seller;
 
-    // Constructors, getters, and setters
+    // Constructor
     public Product(String id, String name, double price, User seller) {
         this.id = id;
         this.name = name;
@@ -14,6 +18,7 @@ public class Product {
         this.seller = seller;
     }
 
+    // Getters and setters
     public String getId() {
         return id;
     }
