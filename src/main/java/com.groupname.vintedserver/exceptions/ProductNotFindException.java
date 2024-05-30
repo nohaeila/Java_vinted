@@ -1,7 +1,10 @@
-package com.myteam.vintedserver.exceptions;
+package com.groupname.vintedserver.exceptions;
 
-public class ProductNotFoundException extends Exception {
-    public ProductNotFoundException(String message) {
+/**
+ * Custom exception to be thrown when a product is not found.
+ */
+public class ProductNotFindException extends Exception {
+    public ProductNotFindException(String message) {
         super(message);
     }
 }

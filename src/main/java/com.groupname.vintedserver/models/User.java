@@ -1,17 +1,22 @@
-package com.myteam.vintedserver.models;
+package com.groupname.vintedserver.models;
 
+/**
+ * This class represents a user in the system.
+ * It contains basic user information such as ID, username, and email.
+ */
 public class User {
     private String id;
     private String username;
     private String email;
 
-    // Constructors, getters, and setters
+    // Constructor
     public User(String id, String username, String email) {
         this.id = id;
         this.username = username;
         this.email = email;
     }
 
+    // Getters and setters
     public String getId() {
         return id;
     }
